@@ -29,7 +29,7 @@ namespace DomainModel.Concrete
             }
             set
             {
-                Tasks = value;
+                tasks = value.ToList();
             }
         }
     }
