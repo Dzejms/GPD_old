@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,10 +59,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\mvc3-rtm-sources\mvc3\src\SystemWebMvc\System.Web.Mvc.csproj">
-      <Project>{3D3FFD8A-624D-4E9B-954B-E1C105507975}</Project>
-      <Name>System.Web.Mvc</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DomainModel\DomainModel.csproj">
       <Project>{8DE5812F-072A-4B36-A84A-F4377A6314FC}</Project>
       <Name>DomainModel</Name>
