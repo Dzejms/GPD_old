@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Tests\UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTests", "AcceptanceTests\AcceptanceTests.csproj", "{CB3F5709-1A02-4DDA-989E-7495FBADE443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Mvc", "..\mvc3-rtm-sources\mvc3\src\SystemWebMvc\System.Web.Mvc.csproj", "{3D3FFD8A-624D-4E9B-954B-E1C105507975}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -48,14 +46,6 @@ Global
 		{CB3F5709-1A02-4DDA-989E-7495FBADE443}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
 		{CB3F5709-1A02-4DDA-989E-7495FBADE443}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{CB3F5709-1A02-4DDA-989E-7495FBADE443}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.ActiveCfg = CodeCoverage|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.CodeCoverage|Any CPU.Build.0 = CodeCoverage|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.FxCop|Any CPU.ActiveCfg = FxCop|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.FxCop|Any CPU.Build.0 = FxCop|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D3FFD8A-624D-4E9B-954B-E1C105507975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
