@@ -10,7 +10,6 @@ using WatiN.Core;
 namespace AcceptanceTests.Steps
 {
     [Binding]
-    [Ignore]
     public class AddTaskSteps
     {
         [SetUp] 
