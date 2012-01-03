@@ -43,7 +43,7 @@ namespace UnitTests
             
             // Assert
             Assert.IsNotNull(viewModel, "View Model was null");
-            Assert.AreEqual(25, viewModel.TimerMinutes);
+            Assert.AreEqual("25:00", viewModel.TimerMinutes);
         }
 
         [Test]
