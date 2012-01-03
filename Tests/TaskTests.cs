@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
@@ -25,6 +26,7 @@ namespace Tests
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
+            Assert.IsNotNull(result);
             Assert.AreEqual("Tasks", result.ViewBag.Title);
         }
 
@@ -35,7 +37,7 @@ namespace Tests
             TasksController controller = new TasksController();
 
             // Act
-            ViewResult result = controller.@New();
+            ViewResult result = controller.New();
             
             // Assert
             Assert.AreEqual("New Task", result.ViewBag.Title);

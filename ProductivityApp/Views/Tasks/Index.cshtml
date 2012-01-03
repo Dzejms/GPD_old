@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<DomainModel.Entities.Task>
 
 @{
-    ViewBag.Title = "Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Tasks</h2>
@@ -30,7 +30,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>

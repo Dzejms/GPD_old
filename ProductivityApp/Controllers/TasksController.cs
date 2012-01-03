@@ -12,7 +12,7 @@ namespace ProductivityApp.Controllers
 {
     public class TasksController : Controller
     {
-        private ITasksRepository repository;
+        private readonly ITasksRepository repository;
 
         public TasksController()
         {
@@ -24,7 +24,7 @@ namespace ProductivityApp.Controllers
             this.repository = tasksRepository;
         }
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
             ViewBag.Title = "Tasks";
             return View(repository.Tasks.ToList());
@@ -33,7 +33,7 @@ namespace ProductivityApp.Controllers
         public ViewResult New()
         {
             ViewBag.Title = "New Task";
-            return View(new EditTaskViewModel(new Task()));
+            return View(new EditTaskViewModel() {Task = new Task(), PageTitle = ViewBag.Title});
         }
 
         [HttpPost]
