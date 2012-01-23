@@ -12,11 +12,9 @@ Scenario: Submit a new Task with Valid Data
 	Given I am viewing the New Task form
 	And I have entered valid data in the form fields:
 	| Field | Value        |
-	| Task.Name  | Task Name |
 	| Task.Description  | Task Description |
 	When I press create
 	Then I should be redirected to the ToDo List
 	And The newly created Task is displayed in the list:
 	| Field | Value        |
-	| Task.Name  | Task Name |
 	| Task.Description  | Task Description |

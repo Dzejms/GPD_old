@@ -18,7 +18,7 @@ namespace UnitTests
         public void DisplayAListOfTasks()
         {
             // Arrange
-            List<Task> tasks = new List<Task>() {new Task() {Name = "Task1", Description = "First Task"}, new Task() {Name = "Task2", Description = "Second Task"}};
+            List<Task> tasks = new List<Task>() {new Task() {Description = "First Task"}, new Task() {Description = "Second Task"}};
             TimerController controller = new TimerController();
 
 
@@ -34,7 +34,7 @@ namespace UnitTests
         public void HaveADefaultTimerOf25Minutes()
         {
             // Arrange
-            List<Task> tasks = new List<Task>() {new Task() {Name = "Task1", Description = "First Task"}, new Task() {Name = "Task2", Description = "Second Task"}};
+            List<Task> tasks = new List<Task>() {new Task() {Description = "First Task"}, new Task() {Description = "Second Task"}};
             TimerController controller = new TimerController();
 
 
@@ -50,7 +50,7 @@ namespace UnitTests
         public void HaveASpecificTitle()
         {
             // Arrange
-            List<Task> tasks = new List<Task>() { new Task() { Name = "Task1", Description = "First Task" }, new Task() { Name = "Task2", Description = "Second Task" } };
+            List<Task> tasks = new List<Task>() { new Task() { Description = "First Task" }, new Task() { Description = "Second Task" } };
             TimerController controller = new TimerController();
 
             // Act

@@ -53,7 +53,6 @@ namespace Tests
             EditTaskViewModel viewModel = (EditTaskViewModel)controller.New().Model;
 
             // Assert
-            Assert.IsNull(viewModel.Task.Name);
             Assert.IsNull(viewModel.Task.Description);
         }
 
@@ -62,7 +61,7 @@ namespace Tests
         {
             // Arrange
             TasksController controller = new TasksController();
-            Task newTask = new Task() { Name = "Name", Description = "Description" };
+            Task newTask = new Task() { Description = "Description" };
             
             // Act
             RedirectToRouteResult result = controller.New(newTask) as RedirectToRouteResult;
@@ -77,15 +76,14 @@ namespace Tests
         {
             // Arrange
             FakeTasksRepository repository = new FakeTasksRepository();
-            repository.Save(new Task() { Name = "Name1", Description = "Description1" });
+            repository.Save(new Task() { Description = "Description1" });
             TasksController controller = new TasksController(repository);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
-            Task task = ((List<Task>)result.Model).Single(x => x.Name == "Name1") as Task;
+            Task task = ((List<Task>)result.Model).Single(x => x.Description == "Description1") as Task;
 
             // Assert
-            Assert.AreEqual("Name1", task.Name);
             Assert.AreEqual("Description1", task.Description);
         }
     }

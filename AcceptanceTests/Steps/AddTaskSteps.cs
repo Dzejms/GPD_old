@@ -96,7 +96,6 @@ namespace AcceptanceTests.Steps
         {
 
             Table table = new Table(new string[] { "Field", "Value" });
-            table.AddRow(new string[] { "Task.Name", "MyTaskName" });
             table.AddRow(new string[] { "Task.Description", "MyTaskDescription" });
             GivenIAmViewingTheNewTaskForm();
             GivenIHaveEnteredValidDataInTheFormFields(table);

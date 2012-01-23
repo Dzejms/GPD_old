@@ -12,7 +12,7 @@
 <ul>
 @foreach (Task task in Model.Tasks)
 {
-    <li>@task.Name | @task.Description</li>
+    <li>@task.Description</li>
 }
 <input type="hidden" name="minutes" id="minutes" value="@Model.TimerMinutes" />
 </ul>
