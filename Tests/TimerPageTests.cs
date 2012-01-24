@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Moq;
 using NUnit.Framework;
 using ProductivityApp.Controllers;
 using System.Web.Mvc;
-using System.Diagnostics;
 using ProductivityApp.Models;
 using DomainModel.Entities;
+using DomainModel.Abstract;
 
 namespace UnitTests
 {
@@ -19,7 +18,10 @@ namespace UnitTests
         {
             // Arrange
             List<Task> tasks = new List<Task>() {new Task() {Description = "First Task"}, new Task() {Description = "Second Task"}};
-            TimerController controller = new TimerController();
+            Mock<ITasksRepository> repository = new Mock<ITasksRepository>();
+            repository.Setup(x => x.Tasks).Returns(tasks.AsQueryable());
+
+            TimerController controller = new TimerController(repository.Object);
 
 
             // Act
@@ -35,7 +37,10 @@ namespace UnitTests
         {
             // Arrange
             List<Task> tasks = new List<Task>() {new Task() {Description = "First Task"}, new Task() {Description = "Second Task"}};
-            TimerController controller = new TimerController();
+            Mock<ITasksRepository> repository = new Mock<ITasksRepository>();
+            repository.Setup(x => x.Tasks).Returns(tasks.AsQueryable());
+
+            TimerController controller = new TimerController(repository.Object);
 
 
             // Act
@@ -51,7 +56,10 @@ namespace UnitTests
         {
             // Arrange
             List<Task> tasks = new List<Task>() { new Task() { Description = "First Task" }, new Task() { Description = "Second Task" } };
-            TimerController controller = new TimerController();
+            Mock<ITasksRepository> repository = new Mock<ITasksRepository>();
+            repository.Setup(x => x.Tasks).Returns(tasks.AsQueryable());
+
+            TimerController controller = new TimerController(repository.Object);
 
             // Act
             TimerPageViewModel viewModel = ((ViewResult)controller.Index()).Model as TimerPageViewModel;

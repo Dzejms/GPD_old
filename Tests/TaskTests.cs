@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using NUnit.Framework;
 using System.Web.Mvc;
 using ProductivityApp.Controllers;
 using ProductivityApp.Models;
 using DomainModel.Entities;
-using Moq;
 using DomainModel.Concrete;
 
-namespace Tests
+namespace UnitTests
 {
     [TestFixture]
     public class TaskTests

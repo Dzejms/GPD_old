@@ -16,9 +16,27 @@ namespace DomainModel.Concrete
             tasks = tasks ?? new List<Task>();
         }
 
-        public void Save(Task task)
+        public bool Save(Task task)
         {
-            tasks.Add(task);
+            bool result = false;
+            if (task.ID == 0)
+            {
+                task.ID = NextId();
+                tasks.Add(task);
+            } 
+            else
+            {
+                tasks.First(x => x.ID == task.ID).Description = task.Description;
+            }
+            result = true;
+            return result;
+        }
+
+        private static int NextId()
+        {
+            if (tasks.Count == 0)
+                return 1;
+            return tasks.Max(x => x.ID) + 1;
         }
 
         public IQueryable<Task> Tasks

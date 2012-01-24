@@ -9,19 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "new", new { }, new { id = "addTaskLink" })
 </p>
-<table>
+<ul>
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
-        </td>
-    </tr>
+    <li>
+        @Html.DisplayFor(modelItem => item.Description) | @Html.ActionLink("Edit", "Edit", new { id = item.ID }) | @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </li>
 }
-</table>
+</ul>
 
 @using (@Html.BeginForm("index", "timer"))
 {

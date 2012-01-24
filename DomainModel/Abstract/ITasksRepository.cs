@@ -9,6 +9,6 @@ namespace DomainModel.Abstract
     public interface ITasksRepository
     {
         IQueryable<Task> Tasks { get; set; }
-        void Save(Task task);
+        bool Save(Task task);
     }
 }
