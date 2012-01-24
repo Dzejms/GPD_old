@@ -31,14 +31,8 @@ namespace AcceptanceTests.Steps
         [Then(@"the 25 minute timer should be on the screen")]
         public void ThenThe25MinuteTimerShouldBeOnTheScreen()
         {
-            Assert.AreEqual("http://localhost:3592/work", WebBrowser.Current.Url);
+            Assert.AreEqual("http://localhost:3592/timer", WebBrowser.Current.Url);
             Assert.IsTrue(WebBrowser.Current.ContainsText("Work Now!"), "\"New Task\" wasn't on the page.");
-        }
-
-        [Then(@"the list of tasks should be on the screen")]
-        public void ThenTheListOfTasksShouldBeOnTheScreen()
-        {
-            ScenarioContext.Current.Pending();
         }
 
     }
