@@ -55,13 +55,13 @@ namespace ProductivityApp.Controllers
         }
 
         [HttpPost]
-        public ViewResult Edit(Task task)
+        public JsonResult Edit(Task task)
         {
             bool result = false;
             Task taskToSave = repository.Tasks.FirstOrDefault(x => x.ID == task.ID);
             if (taskToSave != null)
                 result = repository.Save(taskToSave);
-            return View(result);
+            return Json(result);
         }
 
         [HttpPost]

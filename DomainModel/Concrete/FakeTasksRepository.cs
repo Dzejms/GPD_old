@@ -18,7 +18,6 @@ namespace DomainModel.Concrete
 
         public bool Save(Task task)
         {
-            bool result = false;
             if (task.ID == 0)
             {
                 task.ID = NextId();
@@ -28,8 +27,7 @@ namespace DomainModel.Concrete
             {
                 tasks.First(x => x.ID == task.ID).Description = task.Description;
             }
-            result = true;
-            return result;
+            return true;
         }
 
         private static int NextId()

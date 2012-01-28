@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using DomainModel.Concrete;
 using NUnit.Framework;
 using Moq;
 using DomainModel.Abstract;
@@ -42,13 +43,13 @@ namespace UnitTests
         public void Redirect_To_The_List_When_Valid_Task_Is_Posted()
         {
             // Arrange
-            TasksController controller = new TasksController(repository.Object);
+            TasksController controller = new TasksController(new FakeTasksRepository());
 
             // Act
-            ViewResult result = controller.Edit(new Task {ID = 1, Description = "Changed Description"}) as ViewResult;
+            JsonResult result = controller.Edit(new Task {ID = 1, Description = "Changed Description"}) as JsonResult;
 
             // Assert
-            Assert.IsTrue((bool)result.Model);
+            Assert.IsTrue((bool)result.Data);
         }
 
         [Ignore]
